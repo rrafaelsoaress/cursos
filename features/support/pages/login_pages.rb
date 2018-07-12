@@ -4,6 +4,7 @@ class LoginPage < SitePrism::Page
     element :campo_email, '#login_email'
     element :campo_senha, 'input[name=password]'
     element :botao_entrar, 'button[id*=btnLogin]'
+    element :alerta, '.alert-login'
 
     def logar(email,senha)
         campo_email.set email
