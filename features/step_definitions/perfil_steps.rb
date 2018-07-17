@@ -1,5 +1,5 @@
 Dado("que acesso o meu perfil") do
-    visit '/user_settings/profile'
+    @perfil_page.load
     @perfil_page.wait_for_formulario
   end
   

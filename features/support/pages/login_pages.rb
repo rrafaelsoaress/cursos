@@ -1,5 +1,6 @@
 
 class LoginPage < SitePrism::Page
+    set_url '/login'
     element :formulario, '#login_form'
     element :campo_email, '#login_email'
     element :campo_senha, 'input[name=password]'

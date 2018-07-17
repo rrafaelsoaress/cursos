@@ -1,5 +1,6 @@
 
 class PerfilPage < SitePrism::Page
+    set_url '/user_settings/profile'
     element :campo_empresa, '#profile-company'
     element :combo_cargo, 'select[name$=job]'
     element :formulario, '#user-settings-profile-edit-form'
