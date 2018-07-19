@@ -10,7 +10,7 @@ Funcionalidade: Cadastrar tarefas
     Cenario: Nova tarefa
 
         Dado que eu tenho uma tarefa com os seguintes atributos:
-            | nome | Fazer Compras |
+            | nome | Fazer compras again |
             | data | 25/06/2018    |
         E eu quero taguear esta tarefa com:
             | tag          |
@@ -18,5 +18,5 @@ Funcionalidade: Cadastrar tarefas
             | ketchup      |
             | compras      |
         Quando faço o cadastro dessa tarefa
-        Então devo ver está tarefa com o status "Em andamento"
+        Então devo ver esta tarefa com o status "Em andamento"
         E devo ver somente 1 tarefa com o nome cadastrado
