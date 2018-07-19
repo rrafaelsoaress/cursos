@@ -4,8 +4,8 @@ class AdicionarPage < SitePrism::Section
     element :formulario, '.view-header'
     element :campo_nome, '#title'
     element :campo_data, '#dueDate'
-    element:botao_cadastrar, '#form-submit-button'  
-    
+    element :botao_cadastrar, '#form-submit-button'
+        
     def nova(tarefa)
         campo_nome.set tarefa[:nome]
         campo_data.set tarefa[:data]
@@ -18,6 +18,7 @@ class TarefasPage < SitePrism::Page
     element :botao_novo, '#insert-button'
     element :campo_busca, '#search-input'
     element :botao_busca, '#search-button'
+    element :alerta, '.panel-body'
 
     section :adicionar, AdicionarPage, '#add-task-view'
 
