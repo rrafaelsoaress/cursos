@@ -19,3 +19,12 @@ end
 After('@logout') do
     @nav.logout
 end
+
+After do |scenario|
+   nome_cenario = scenario.name.gsub(/[^A-Za-z0-9 ]/, '')
+   nome_cenario = nome_cenario.gsub(' ', '-').downcase!
+
+   screenshot = "log/screenshot/#{nome_cenario}.png"
+   page.save_screenshot(screenshot)
+   embed(screenshot, 'image/png', 'Evidencia')
+end

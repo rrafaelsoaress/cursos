@@ -25,6 +25,7 @@ class TarefasPage < SitePrism::Page
     element :botao_novo, '#insert-button'
     element :campo_busca, '#search-input'
     element :botao_busca, '#search-button'
+    # element :botao_deletar, '#delete-button'
     
 
     section :adicionar, AdicionarPage, '#add-task-view'
