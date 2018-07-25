@@ -65,7 +65,9 @@ Quando("confirmo esta solicitação") do
 end
 
 Então("esta tarefa não deve ser exibida na lista") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @tarefas_page.busca(@tarefa[:nome])
+  painel = find('#task-board')
+  expect(painel).to have_content 'Hmm... nenhuma tarefa encontrada'
 end
 
 Quando("desisto da confirmação") do
